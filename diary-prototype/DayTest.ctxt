@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DayTest()
+comment0.text=\n\ Default\ constructor\ for\ test\ class\ DayTest\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ Sets\ up\ the\ test\ fixture.\n\n\ Called\ before\ every\ test\ case\ method.\n
+comment2.params=
+comment2.target=void\ fillDay()
+comment3.params=
+comment3.target=void\ t4a_firstAppointmentInEmptyDayShouldSucceed()
+comment4.params=
+comment4.target=void\ t4b_firstAppointmentInEmptyDayShouldActuallyScheduleAppointment()
+comment5.params=
+comment5.target=void\ t5_appointmentTooEarlyShouldFail()
+comment6.params=
+comment6.target=void\ t6_appointmentTooLateShouldFail()
+comment7.params=
+comment7.target=void\ t7a_secondAppointmentInNonEmptySlotFails()
+comment8.params=
+comment8.target=void\ t7b_secondAppointmentInNonEmptySlotLeavesFirstAppointment()
+numComments=9

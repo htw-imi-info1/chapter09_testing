@@ -1,16 +1,16 @@
 #BlueJ package file
 package.editor.height=400
 package.editor.width=560
-package.editor.x=502
-package.editor.y=334
+package.editor.x=118
+package.editor.y=33
 package.numDependencies=0
 package.numTargets=2
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
 target1.editor.height=574
-target1.editor.width=760
-target1.editor.x=40
+target1.editor.width=774
+target1.editor.x=184
 target1.editor.y=22
 target1.height=50
 target1.name=OddityTest

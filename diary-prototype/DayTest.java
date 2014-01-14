@@ -119,5 +119,29 @@ public class DayTest
        // then: appoint not scheduled
         assertEquals(originalAppointment, day1.getAppointment(11) );
     }
+    
+    
+    @Test
+    public void t8_findSpaceInEmptyDayShouldReturnFirstSlot(){
+        // given empty day
+        // when findSpace for 2h appointment
+        int actual = day1.findSpace(new Appointment("lasts 2 h",2));
+        // then should return 900
+        assertEquals(9,actual);
+        
+    }
+    @Test
+    public void t9_longerAppointmentOverlappingOtherShouldFail(){
+        //given appointment @ 1200
+        day1.makeAppointment(12,a1);
+        //when makeAppointment 900-1400 (5h @ 900)
+        Appointment longAppointment = new Appointment("loooong",5);
+        boolean actual =   day1.makeAppointment(9,longAppointment);
+        //then should fail
+        assertEquals(false, actual);
+        
+        
+    
+    }
 }
 

@@ -1,4 +1,24 @@
 #BlueJ class context
 comment0.params=
-comment0.target=void\ isOdd()
-numComments=1
+comment0.target=OddityTest()
+comment0.text=\n\ Default\ constructor\ for\ test\ class\ OddityTest\n
+comment1.params=
+comment1.target=void\ whatWeHaveLearned()
+comment1.text=\n\ das\ geh\u00F6rt\ nat\u00FCrlich\ auch\ nicht\ in\ die\ Endg\u00FCltige\n\ Testklasse\!\n
+comment2.params=
+comment2.target=void\ allEvenNumbers()
+comment2.text=\n\ this\ test\ is\ too\ slow\!\n
+comment3.params=
+comment3.target=void\ allOddNumbers()
+comment3.text=\n\ this\ test\ is\ too\ slow\!\n
+comment4.params=
+comment4.target=void\ fourIsEven()
+comment5.params=
+comment5.target=void\ threeIsOdd()
+comment6.params=
+comment6.target=void\ zeroShouldBeEven()
+comment7.params=
+comment7.target=void\ minusThreeIsOdd()
+comment8.params=
+comment8.target=void\ minusFourHundredIsEven()
+numComments=9

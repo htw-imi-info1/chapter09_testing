@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=NoteBookTest()
+comment0.text=\n\ Default\ constructor\ for\ test\ class\ NoteBookTest\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ Sets\ up\ the\ test\ fixture.\n\n\ Called\ before\ every\ test\ case\ method.\n
+comment2.params=
+comment2.target=void\ addingOneElementResultsInSizeOne()
+comment3.params=
+comment3.target=void\ removingOneElementReducesSizeByOne()
+comment4.params=
+comment4.target=void\ removingOneElementReturnsTrue()
+comment5.params=
+comment5.target=void\ removeFromEmptyNoteBookReturnsFalse()
+numComments=6

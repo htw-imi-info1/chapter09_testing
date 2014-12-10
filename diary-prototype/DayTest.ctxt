@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DayTest()
+comment0.text=\n\ Default\ constructor\ for\ test\ class\ DayTest\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ Sets\ up\ the\ test\ fixture.\n\n\ Called\ before\ every\ test\ case\ method.\n
+comment2.params=
+comment2.target=void\ findsSpaceFor1HourAppointment()
+comment3.params=
+comment3.target=void\ findsSpaceFor2HourAppointment()
+comment4.params=
+comment4.target=void\ fillDayBut10()
+comment5.params=
+comment5.target=void\ findsSpaceFor2HourAppointmentInAlmostFullDay()
+numComments=6

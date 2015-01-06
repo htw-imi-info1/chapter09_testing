@@ -1,5 +1,4 @@
 
-
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -33,16 +32,7 @@ public class CalcEngineTest
         calcEngine = new CalcEngine();
     }
 
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @After
-    public void tearDown()
-    {
-    }
-
+   
     @Test
     public void testSimplePlus()
     {
@@ -53,6 +43,7 @@ public class CalcEngineTest
         calcEngine.equals();
         assertEquals(78, calcEngine.getDisplayValue());
     }
+
     @Test
     public void testSimpleMinus()
     {
@@ -64,6 +55,7 @@ public class CalcEngineTest
         calcEngine.equals();
         assertEquals(55, calcEngine.getDisplayValue());
     }
+
     @Test
     public void testSeveralPlus()
     {
@@ -77,6 +69,7 @@ public class CalcEngineTest
         calcEngine.equals();
         assertEquals(20, calcEngine.getDisplayValue());
     }
+
     @Test
     public void testSeveralMinus()
     {
@@ -92,6 +85,66 @@ public class CalcEngineTest
         calcEngine.numberPressed(5);
         calcEngine.equals();
         assertEquals(60, calcEngine.getDisplayValue());
+    }
+
+    @Test
+    public void testMinusWithNegativeResult()
+    {
+        calcEngine.numberPressed(3);
+        calcEngine.minus();
+        calcEngine.numberPressed(4);
+        calcEngine.equals();
+        assertEquals(-1, calcEngine.getDisplayValue());
+    }
+
+    @Test
+    public void testMinusThenPlus()
+    {
+        calcEngine.numberPressed(3);
+        calcEngine.minus();
+        calcEngine.numberPressed(4);
+        calcEngine.minus();
+        calcEngine.numberPressed(2);
+        calcEngine.equals();
+        assertEquals("Zwischenergebnis",-3, calcEngine.getDisplayValue());
+        calcEngine.clear();
+        calcEngine.numberPressed(1);
+        calcEngine.plus();
+        calcEngine.numberPressed(5);
+        calcEngine.equals();
+        assertEquals("Ergebnis",6, calcEngine.getDisplayValue());
+
+    }
+     @Test
+    public void testMinusThenPlusShorter()
+    {
+        calcEngine.numberPressed(3);
+        calcEngine.minus();
+        calcEngine.numberPressed(4);
+        calcEngine.equals();
+        assertEquals("Zwischenergebnis",-1, calcEngine.getDisplayValue());
+        calcEngine.clear();
+        calcEngine.numberPressed(1);
+        calcEngine.plus();
+        calcEngine.numberPressed(5);
+        calcEngine.equals();
+        assertEquals("Ergebnis",6, calcEngine.getDisplayValue());
+
+    }
+     @Test
+    public void testMinusThenPlusWithoutClear()
+    {
+        calcEngine.numberPressed(3);
+        calcEngine.minus();
+        calcEngine.numberPressed(4);
+        calcEngine.equals();
+        assertEquals("Zwischenergebnis",-1, calcEngine.getDisplayValue());
+        calcEngine.numberPressed(1);
+        calcEngine.plus();
+        calcEngine.numberPressed(5);
+        calcEngine.equals();
+        assertEquals("Ergebnis",6, calcEngine.getDisplayValue());
+
     }
 }
 

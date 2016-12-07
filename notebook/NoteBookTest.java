@@ -6,8 +6,7 @@ import org.junit.Test;
 /**
  * The test class NoteBookTest.
  *
- * @author  (your name)
- * @version (a version number or a date)
+ * @author  Barne Kleinen
  */
 public class NoteBookTest
 {

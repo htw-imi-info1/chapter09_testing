@@ -1,11 +1,14 @@
 #BlueJ package file
+dependency1.from=NoteBookTest
+dependency1.to=NoteBook
+dependency1.type=UsesDependency
 objectbench.height=100
 objectbench.width=363
 package.editor.height=400
 package.editor.width=560
-package.editor.x=-15
+package.editor.x=149
 package.editor.y=23
-package.numDependencies=0
+package.numDependencies=1
 package.numTargets=2
 package.showExtends=true
 package.showUses=true

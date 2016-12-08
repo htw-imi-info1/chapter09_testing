@@ -1,5 +1,4 @@
 
-
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -8,8 +7,7 @@ import org.junit.Test;
 /**
  * The test class CalcEngineTest.
  *
- * @author  (your name)
- * @version (a version number or a date)
+ * @author Barne Kleinen
  */
 public class CalcEngineTest
 {
@@ -33,16 +31,6 @@ public class CalcEngineTest
         calcEngine = new CalcEngine();
     }
 
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @After
-    public void tearDown()
-    {
-    }
-
     @Test
     public void testSimplePlus()
     {
@@ -53,6 +41,7 @@ public class CalcEngineTest
         calcEngine.equals();
         assertEquals(78, calcEngine.getDisplayValue());
     }
+
     @Test
     public void testSimpleMinus()
     {
@@ -64,6 +53,7 @@ public class CalcEngineTest
         calcEngine.equals();
         assertEquals(55, calcEngine.getDisplayValue());
     }
+
     @Test
     public void testSeveralPlus()
     {
@@ -77,6 +67,7 @@ public class CalcEngineTest
         calcEngine.equals();
         assertEquals(20, calcEngine.getDisplayValue());
     }
+
     @Test
     public void testSeveralMinus()
     {
@@ -92,6 +83,55 @@ public class CalcEngineTest
         calcEngine.numberPressed(5);
         calcEngine.equals();
         assertEquals(60, calcEngine.getDisplayValue());
+    }
+
+    @Test
+    public void testInClass()
+    {
+        calcEngine.numberPressed(7);
+        calcEngine.plus();
+        calcEngine.numberPressed(3);
+        calcEngine.minus();
+        calcEngine.numberPressed(3);
+        calcEngine.equals();
+        assertEquals(7, calcEngine.getDisplayValue());
+    }
+
+    @Test
+    public void testUseClear()
+    {
+        calcEngine.numberPressed(7);
+        calcEngine.plus();
+        calcEngine.numberPressed(3);
+        calcEngine.minus();
+        calcEngine.numberPressed(3);
+        calcEngine.equals();
+        calcEngine.clear();
+        calcEngine.numberPressed(6);
+        calcEngine.plus();
+        calcEngine.numberPressed(3);
+        calcEngine.equals();
+
+        assertEquals(9, calcEngine.getDisplayValue());
+    }
+
+    @Test
+    public void testUseSeveralEquals()
+    {
+        calcEngine.numberPressed(5);
+        calcEngine.plus();
+        calcEngine.numberPressed(3);
+        calcEngine.equals();
+
+        calcEngine.minus();
+        calcEngine.numberPressed(2);
+        calcEngine.equals();
+
+        calcEngine.plus();
+        calcEngine.numberPressed(3);
+        calcEngine.equals();
+
+        assertEquals(9, calcEngine.getDisplayValue());
     }
 }
 

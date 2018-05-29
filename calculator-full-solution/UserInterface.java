@@ -9,10 +9,9 @@ import javax.swing.border.*;
  * screen. It then refers to the "CalcEngine" to do all the real work.
  * 
  * @author: Michael Kölling and David J. Barnes
- * @version 2011.07.31
+ * @version 2016.02.29
  */
 public class UserInterface
-    implements ActionListener
 {
     private CalcEngine calc;
     private boolean showingAuthor;
@@ -57,25 +56,25 @@ public class UserInterface
         contentPane.add(display, BorderLayout.NORTH);
 
         JPanel buttonPanel = new JPanel(new GridLayout(4, 4));
-            addButton(buttonPanel, "7");
-            addButton(buttonPanel, "8");
-            addButton(buttonPanel, "9");
-            addButton(buttonPanel, "C");
+            addNumberButton(buttonPanel, 7);
+            addNumberButton(buttonPanel, 8);
+            addNumberButton(buttonPanel, 9);
+            addButton(buttonPanel, "C", () -> calc.clear());
             
-            addButton(buttonPanel, "4");
-            addButton(buttonPanel, "5");
-            addButton(buttonPanel, "6");
-            addButton(buttonPanel, "?");
+            addNumberButton(buttonPanel, 4);
+            addNumberButton(buttonPanel, 5);
+            addNumberButton(buttonPanel, 6);
+            addButton(buttonPanel, "?", () -> showInfo());
             
-            addButton(buttonPanel, "1");
-            addButton(buttonPanel, "2");
-            addButton(buttonPanel, "3");
+            addNumberButton(buttonPanel, 1);
+            addNumberButton(buttonPanel, 2);
+            addNumberButton(buttonPanel, 3);
             buttonPanel.add(new JLabel(" "));
             
-            addButton(buttonPanel, "0");
-            addButton(buttonPanel, "+");
-            addButton(buttonPanel, "-");
-            addButton(buttonPanel, "=");
+            addNumberButton(buttonPanel, 0);
+            addButton(buttonPanel, "+", () -> calc.plus());
+            addButton(buttonPanel, "-", () -> calc.minus());
+            addButton(buttonPanel, "=", () -> calc.equals());
             
         contentPane.add(buttonPanel, BorderLayout.CENTER);
 
@@ -89,54 +88,23 @@ public class UserInterface
      * Add a button to the button panel.
      * @param panel The panel to receive the button.
      * @param buttonText The text for the button.
+     * @param action Action to be taken by the button.
      */
-    private void addButton(Container panel, String buttonText)
+    private void addButton(Container panel, String buttonText, ButtonAction action)
     {
         JButton button = new JButton(buttonText);
-        button.addActionListener(this);
+        button.addActionListener(e -> { action.act(); redisplay(); });
         panel.add(button);
     }
 
     /**
-     * An interface action has been performed.
-     * Find out what it was and handle it.
-     * @param event The event that has occured.
+     * Add a number button to the button panel.
+     * @param panel The panel to receive the button.
+     * @param digit The single digit on the button.
      */
-    public void actionPerformed(ActionEvent event)
+    private void addNumberButton(Container panel, int digit)
     {
-        String command = event.getActionCommand();
-
-        if(command.equals("0") ||
-           command.equals("1") ||
-           command.equals("2") ||
-           command.equals("3") ||
-           command.equals("4") ||
-           command.equals("5") ||
-           command.equals("6") ||
-           command.equals("7") ||
-           command.equals("8") ||
-           command.equals("9")) {
-            int number = Integer.parseInt(command);
-            calc.numberPressed(number);
-        }
-        else if(command.equals("+")) {
-            calc.plus();
-        }
-        else if(command.equals("-")) {
-            calc.minus();
-        }
-        else if(command.equals("=")) {
-            calc.equals();
-        }
-        else if(command.equals("C")) {
-            calc.clear();
-        }
-        else if(command.equals("?")) {
-            showInfo();
-        }
-        // else unknown command.
-
-        redisplay();
+        addButton(panel, "" + digit, () -> calc.numberPressed(digit));
     }
 
     /**
@@ -160,5 +128,17 @@ public class UserInterface
             status.setText(calc.getAuthor());
 
         showingAuthor = !showingAuthor;
+    }
+    
+    /**
+     * Functional interface for button actions.
+     */
+    @FunctionalInterface
+    private interface ButtonAction
+    {
+        /**
+         * Act on a button press.
+         */
+        public void act();
     }
 }

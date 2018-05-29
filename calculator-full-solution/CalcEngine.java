@@ -2,7 +2,7 @@
  * The main part of the calculator doing the calculations.
  * 
  * @author  David J. Barnes and Michael Kölling 
- * @version 2011.07.31
+ * @version 2016.02.29
  */
 public class CalcEngine
 {
@@ -119,7 +119,7 @@ public class CalcEngine
      */
     public String getAuthor()
     {
-        return "David J. Barnes and Michael K�lling";
+        return "David J. Barnes and Michael Kölling";
     }
 
     /**

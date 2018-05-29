@@ -4,9 +4,9 @@ Authors: Michael Kölling and David J. Barnes
 This project is part of the material for the book
 
    Objects First with Java - A Practical Introduction using BlueJ
-   Fifth edition
+   Sixth edition
    David J. Barnes and Michael Kölling
-   Pearson Education, 2012
+   Pearson Education, 2016
 
 
 This program is meant to implement a simple pocket calculator.

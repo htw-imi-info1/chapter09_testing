@@ -1,78 +1,58 @@
 /**
- * The main part of the calculator performing the
- * arithmetic logic of the calculations.
- * @author Hacker T. Largebrain 
- * @version 1.0
+ * The main part of the calculator doing the calculations.
+ * 
+ * @author: (none yet)
+ * @version 0.1 (incomplete)
  */
 public class CalcEngine
 {
-    // The value in the display.
-    private int displayValue;
-    // The previous operator typed (+ or -).
-    private char previousOperator;
-    // The left operand to previousOperator.
-    private int leftOperand;
+    // Put instance variables here.
 
     /**
-     * Create a CalcEngine instance.
+     * Create a CalcEngine.
      */
     public CalcEngine()
     {
-        displayValue = 0;
-        previousOperator = ' ';
-        leftOperand = 0;
     }
 
     /**
-     * @return The value currently displayed
-     * on the calculator.
+     * @return The value that should currently be displayed
+     * on the calculator display.
      */
     public int getDisplayValue()
     {
-        return displayValue;
+        return 0;
     }
 
     /**
      * A number button was pressed.
-     * @param number The single digit.
+     * Either start a new operand, or incorporate this number as
+     * the least significant digit of an existing one.
+     * @param number The number pressed on the calculator.
      */
     public void numberPressed(int number)
     {
-        displayValue = displayValue * 10 + number;
     }
 
     /**
-     * The '+' button was pressed. 
+     * The 'plus' button was pressed. 
      */
     public void plus()
     {
-        applyPreviousOperator();
-        previousOperator = '+';
-        displayValue = 0;
     }
 
     /**
-     * The '-' button was pressed.
+     * The 'minus' button was pressed.
      */
     public void minus()
     {
-        applyPreviousOperator();
-        previousOperator = '-';
-        displayValue = 0;
     }
-    
+
     /**
      * The '=' button was pressed.
      */
     public void equals()
     {
-        if(previousOperator == '+') {
-            displayValue = leftOperand + displayValue;
-        }
-        else {
-            displayValue = leftOperand - displayValue;
-        }
-        leftOperand = 0;
     }
 
     /**
@@ -80,7 +60,6 @@ public class CalcEngine
      */
     public void clear()
     {
-        displayValue = 0;
     }
 
     /**
@@ -88,42 +67,24 @@ public class CalcEngine
      */
     public String getTitle()
     {
-        return "Super Calculator";
+        return "";
     }
 
     /**
-     * @return The author of this engine.
+     * @return The author of this engine. This string is displayed as it is,
+     * so it should say something like "Written by H. Simpson".
      */
     public String getAuthor()
     {
-        return "Hacker T. Largebrain";
+        return "";
     }
 
     /**
-     * @return The version number of this engine.
+     * @return The version number of this engine. This string is displayed as 
+     * it is, so it should say something like "Version 1.1".
      */
     public String getVersion()
     {
-        return "version 0.2";
-    }
-    
-    /**
-     * An operator button has been pressed.
-     * Apply the immediately preceding operator to
-     * calculate an intermediate result. This will
-     * form the left operand of the new operator.
-     */
-    private void applyPreviousOperator()
-    {
-        if(previousOperator == '+') {
-            leftOperand += displayValue;
-        }
-        else if(previousOperator == '-') {
-            leftOperand -= displayValue;
-        }
-        else {
-            // There was no preceding operator.
-            leftOperand = displayValue;
-        }
+        return "";
     }
 }

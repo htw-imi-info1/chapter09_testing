@@ -73,6 +73,7 @@ public class CalcEngine
             displayValue = leftOperand - displayValue;
         }
         leftOperand = 0;
+        previousOperator = ' ';
     }
 
     /**
@@ -81,6 +82,7 @@ public class CalcEngine
     public void clear()
     {
         displayValue = 0;
+        previousOperator = ' ';
     }
 
     /**

@@ -1,5 +1,4 @@
 
-
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -7,9 +6,6 @@ import org.junit.Test;
 
 /**
  * The test class CalcEngineTest.
- *
- * @author  (your name)
- * @version (a version number or a date)
  */
 public class CalcEngineTest
 {
@@ -44,6 +40,19 @@ public class CalcEngineTest
     }
 
     @Test
+    public void testMinusEqualsPlus()
+    {
+        calcEngine.numberPressed(3);
+        calcEngine.minus();  
+        calcEngine.numberPressed(2);
+        calcEngine.equals();
+        calcEngine.plus();
+        calcEngine.numberPressed(1);
+        calcEngine.equals();
+        assertEquals(2, calcEngine.getDisplayValue());
+    }
+
+    @Test
     public void testSimplePlus()
     {
         calcEngine.numberPressed(7);
@@ -53,6 +62,7 @@ public class CalcEngineTest
         calcEngine.equals();
         assertEquals(78, calcEngine.getDisplayValue());
     }
+
     @Test
     public void testSimpleMinus()
     {
@@ -64,6 +74,7 @@ public class CalcEngineTest
         calcEngine.equals();
         assertEquals(55, calcEngine.getDisplayValue());
     }
+
     @Test
     public void testSeveralPlus()
     {
@@ -77,6 +88,7 @@ public class CalcEngineTest
         calcEngine.equals();
         assertEquals(20, calcEngine.getDisplayValue());
     }
+
     @Test
     public void testSeveralMinus()
     {
@@ -93,5 +105,48 @@ public class CalcEngineTest
         calcEngine.equals();
         assertEquals(60, calcEngine.getDisplayValue());
     }
+
+    @Test
+    public void previousState()
+    {
+        // given: Calculator that did a minus op,
+        // c pressed
+        calcEngine.numberPressed(1);
+        calcEngine.minus();  
+        calcEngine.numberPressed(1);
+        calcEngine.equals();
+        calcEngine.clear();
+
+        // when calculation is performed
+        calcEngine.numberPressed(3);
+        calcEngine.minus();  
+        calcEngine.numberPressed(2);
+        calcEngine.plus();
+        calcEngine.numberPressed(1);
+        calcEngine.equals();
+        // then it should return 2
+        assertEquals(2, calcEngine.getDisplayValue());
+    }
+
+    @Test
+    public void clear()
+    {
+        // given: Calculator that did a minus op,
+        // c pressed
+
+        calcEngine.minus(); 
+        calcEngine.clear();
+
+        // when calculation is performed
+        calcEngine.numberPressed(3);
+        calcEngine.minus();  
+        calcEngine.numberPressed(2);
+        calcEngine.plus();
+        calcEngine.numberPressed(1);
+        calcEngine.equals();
+        // then it should return 2
+        assertEquals(2, calcEngine.getDisplayValue());
+    }
+
 }
 

@@ -9,19 +9,14 @@ import org.junit.Test;
  *
  * @author  Barne Kleinen
  */
-public class DayTest
+public class DayTest1HFree
 {
     private Day day1;
     private Appointment info2;
     private Appointment lab;
     private Appointment gdm;
 
-    /**
-     * Default constructor for test class DayTest
-     */
-    public DayTest()
-    {
-    }
+  
 
     /**
      * Sets up the test fixture.

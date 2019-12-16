@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=DayTest1HFreeSecond
+comment0.text=\n\ The\ test\ class\ DayTest.\n\n\ @author\ \ Barne\ Kleinen\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ Sets\ up\ the\ test\ fixture.\n\n\ Called\ before\ every\ test\ case\ method.\n
+comment2.params=
+comment2.target=void\ test2hAppIn1hSlot()
+comment3.params=
+comment3.target=void\ test2hAppIn1hSlotDoesNotOverwriteExistingApp()
+numComments=4

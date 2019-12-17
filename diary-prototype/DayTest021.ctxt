@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=DayTest021
+comment0.text=\n\ Die\ Test-Klasse\ DayTest.\n\n\ @author\ \ (Ihr\ Name)\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment1.params=
+comment1.target=DayTest021()
+comment1.text=\n\ Konstruktor\ fuer\ die\ Test-Klasse\ DayTest\n
+comment2.params=
+comment2.target=void\ setUp()
+comment2.text=\n\ \ Setzt\ das\ Testger\u00D4\u00F8\u03A9st\ fuer\ den\ Test.\n\n\ Wird\ vor\ jeder\ Testfall-Methode\ aufgerufen.\n
+comment3.params=
+comment3.target=void\ dayWithLastHFree()
+comment4.params=
+comment4.target=void\ testLastHourFree()
+comment4.text=@Test\n\ \ \ \ public\ void\ testAllHFull(){\n\ \ \ \ \ \ \ \ //given\ day\ with\ the\ last\ hour\ (16-17)\ free\n\ \ \ \ \ \ \ \ dayWithLastHFree();\n\ \ \ \ \ \ \ \ //when\ I\ put\ an\ Appointment\ for\ every\ hour\ from\ 9\ -\ 15\ \n\ \ \ \ \ \ \ \ boolean\ actual\=false;\n\ \ \ \ \ \ \ \ for(int\ i\=9;\ i<17;i++){\n\ \ \ \ \ \ \ \ \ \ \ \ actual\=day.makeAppointment(i,red);\ \n\ \ \ \ \ \ \ \ \ \ \ \ if(actual){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ //then\ false\ should\ be\ returned\n\ \ \ \ \ \ \ \ assertEquals(false,actual);\n}
+comment5.params=
+comment5.target=void\ testFirstHourFree()
+comment6.params=
+comment6.target=void\ tearDown()
+comment6.text=\n\ Gibt\ das\ Testger\u00D4\u00F8\u03A9st\ wieder\ frei.\n\n\ Wird\ nach\ jeder\ Testfall-Methode\ aufgerufen.\n
+numComments=7

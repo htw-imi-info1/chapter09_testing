@@ -1,17 +1,6 @@
-Project: diary-prototype
-Authors: Michael Kolling and David J. Barnes
+BK: I've added some remarks.
 
-This project is part of the material for the book
+I marked the failing test cases which fail because they 
+correctly uncover a bug with bug! in the message.
 
-   Objects First with Java - A Practical Introduction using BlueJ
-   Fourth edition
-   David J. Barnes and Michael Kolling
-   Pearson Education, 2008
-
-This project allows early prototyping of a new diary project.
-
-To use this project, create individual Week, Day and Appointment instances
-and interact with their methods.
-
-NOTE: There is at least one serious error to be found
-in these classes.
+variable names and method names should always start with a lowercase letter.

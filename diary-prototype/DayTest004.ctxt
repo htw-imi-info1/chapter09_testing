@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=DayTest004
+comment0.text=\n\ Die\ Test-Klasse\ DayTest.\n\n\ @author\ \ (AK)\n\ @version\ (14.12.2019)\n
+comment1.params=
+comment1.target=DayTest004()
+comment2.params=
+comment2.target=void\ Appointment1()
+comment3.params=
+comment3.target=void\ tearDown()
+comment4.params=
+comment4.target=void\ appointmentUeberschneidung()
+comment5.params=
+comment5.target=void\ appointment2()
+comment6.params=
+comment6.target=void\ gl\u00D4\u00F8\u03A9hweinTrinken()
+numComments=7

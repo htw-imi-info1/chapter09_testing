@@ -1,19 +1,17 @@
 #BlueJ class context
-comment0.target=DayTest003
-comment0.text=\n\ Die\ Test-Klasse\ DayTest.\n\n\ @author\ \ AS\n\ @version\ 13.12.2019\n
+comment0.target=DayTest010
+comment0.text=\n\ Die\ Test-Klasse\ DayTest.\n\n\ @author\ \ (Ihr\ Name)\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
 comment1.params=
-comment1.target=DayTest003()
+comment1.target=DayTest010()
 comment1.text=\n\ Konstruktor\ fuer\ die\ Test-Klasse\ DayTest\n
 comment2.params=
-comment2.target=void\ appointmentAtSix()
+comment2.target=void\ setUp()
 comment2.text=\n\ \ Setzt\ das\ Testger\u00D4\u00F8\u03A9st\ fuer\ den\ Test.\n\n\ Wird\ vor\ jeder\ Testfall-Methode\ aufgerufen.\n
 comment3.params=
 comment3.target=void\ tearDown()
 comment3.text=\n\ Gibt\ das\ Testger\u00D4\u00F8\u03A9st\ wieder\ frei.\n\n\ Wird\ nach\ jeder\ Testfall-Methode\ aufgerufen.\n
 comment4.params=
-comment4.target=void\ appointmentsOverlapping()
+comment4.target=void\ Test_1h_break()
 comment5.params=
-comment5.target=void\ lunchBreak()
-comment6.params=
-comment6.target=void\ lunchBreakAppointment()
-numComments=7
+comment5.target=void\ Test_half_day_full()
+numComments=6

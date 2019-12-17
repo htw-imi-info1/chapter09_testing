@@ -45,7 +45,7 @@ public class DayTest1HFree006
 
         boolean actual = day1.makeAppointment(11, gdm);
 
-        assertEquals("2 hours appointment shouldn't be created at 11 a.m. because an appointment already exists at 12 p.m.",false, actual);
+        assertEquals("bug! 2 hours appointment shouldn't be created at 11 a.m. because an appointment already exists at 12 p.m.",false, actual);
     }
 
     @Test

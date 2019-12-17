@@ -60,7 +60,7 @@ public class DayTest1HFree012
         Appointment Break = new Appointment("Break", 2);
         boolean actualValue = day1.makeAppointment(11, Break);
         //then
-        assertEquals(false, actualValue);
+        assertEquals("bug! ",false, actualValue);
     }
 
     @Test

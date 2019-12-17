@@ -13,6 +13,7 @@ import org.junit.Test;
  */
 public class DayTest003
 {
+    // BK: method and variable names should start with a lowercase letter.
     private Day day1;
     private Appointment appointm1;
 
@@ -29,7 +30,7 @@ public class DayTest003
      * Wird vor jeder Testfall-Methode aufgerufen.
      */
     @Before
-    public void AppointmentAtSix()
+    public void appointmentAtSix()
     {
         day1 = new Day(1);
         appointm1 = new Appointment("piano lesson", 2);
@@ -47,10 +48,10 @@ public class DayTest003
     }
 
     @Test
-    public void AppointmentsOverlapping()
+    public void appointmentsOverlapping()
     {
         //given
-        AppointmentAtSix();
+        appointmentAtSix();
         //when
         Appointment concert = new Appointment("Trettman", 3);
         boolean actual = day1.makeAppointment(7, concert);
@@ -60,7 +61,7 @@ public class DayTest003
 
 
     @Before
-    public void LunchBreak()
+    public void lunchBreak()
     {
         Day day1 = new Day(2);
         Appointment appointm2 = new Appointment("Math", 4);
@@ -72,10 +73,10 @@ public class DayTest003
     }
 
     @Test
-    public void LunchBreakAppointment()
+    public void lunchBreakAppointment()
     {
         //given
-        LunchBreak();
+        lunchBreak();
        //when
        Appointment appointm4 = new Appointment ("LunchBreak", 1);
        boolean result= day1.makeAppointment(11, appointm4);

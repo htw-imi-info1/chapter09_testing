@@ -35,7 +35,7 @@ public class DayTest004
     }
 
     @Test
-    public void AppointmentUeberschneidung(){
+    public void appointmentUeberschneidung(){
     Appointment1();
     Appointment arzt = new Appointment("Arzt Termin", 2);
     boolean pa = day1.makeAppointment(10, arzt);
@@ -43,7 +43,7 @@ public class DayTest004
     }
 
     @Before
-    public void Appointment2(){
+    public void appointment2(){
     Day day1 = new Day(2);
     Appointment apmtn2 = new Appointment("Arbeit", 7);
     Appointment apmtn3 = new Appointment("Joggen", 1);
@@ -52,8 +52,8 @@ public class DayTest004
     }
 
     @Test
-    public void Gl�hweinTrinken(){
-    Appointment2();
+    public void gl�hweinTrinken(){
+    appointment2();
     Appointment apmtn4 = new Appointment("Gl�hwein trinken", 1);
     boolean pa2= day1.makeAppointment(16, apmtn4);
     assertEquals(true, pa2);

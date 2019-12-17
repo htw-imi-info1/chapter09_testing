@@ -19,7 +19,7 @@ public class DayTest007
     private Appointment TutINFO;
     private Appointment INFO;
     private Appointment CS;
-    private Appointment Break;
+    private Appointment aBreak;
 
 
 
@@ -41,11 +41,13 @@ public class DayTest007
     @Before
     public void setUp()
     {
+        // variable names should start with a lowercase letter
+        // unfortunately, break is a keyword
         day1 = new Day(344);
         TutINFO = new Appointment("TutINFO", 1);
         INFO = new Appointment("INFO", 4);
-        Break = new Appointment("Break", 2);
-        day1.makeAppointment(12, Break);
+        aBreak = new Appointment("Break", 2);
+        day1.makeAppointment(12, aBreak);
     }
 
 
@@ -88,7 +90,7 @@ public class DayTest007
         //given empty day & break from 12-14
         //when we look up if we have our break
         //then we have the appointment break at 12 & 13
-        assertEquals(Break, day1.getAppointment(12));
-        assertEquals(Break, day1.getAppointment(13));
+        assertEquals(aBreak, day1.getAppointment(12));
+        assertEquals(aBreak, day1.getAppointment(13));
     }
 }

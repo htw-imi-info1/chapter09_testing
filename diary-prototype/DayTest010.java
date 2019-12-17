@@ -63,6 +63,7 @@ public class DayTest010
         //then the appointment is in shedule
         assertEquals(true, day1.makeAppointment(9, appointm1));
     }
+    // negative test missing
 }
 
 

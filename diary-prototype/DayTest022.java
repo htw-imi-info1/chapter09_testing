@@ -54,12 +54,13 @@ public class DayTest022
     @Test
     public void doesNotFit()
     {
+     
         //given empty day & break from 12-14
         //when info is 4h long
         //then it should return false when tying to put before the break.
         //because there is not enough time 
         //before the break. Should be recommended after break.
-        assertEquals(false, day1.makeAppointment(9, INFO));
+        assertEquals("bug!",false, day1.makeAppointment(9, INFO));
     }
 
 
@@ -77,9 +78,13 @@ public class DayTest022
     {
         //given- a day with a 2 hour break from 12pm to 2pm
         //when appointment overwrites break
-        //then return false
+        //then appointment is made
         assertEquals(true, day1.validTime(12));
-        assertEquals(false, day1.makeAppointment(9, INFO));     
+        // hm, this doesn't actually pin down the overwrite:
+        // assertEquals("bug!",false, day1.makeAppointment(9, INFO)); 
+        day1.makeAppointment(9, INFO);
+        // this does:
+        assertEquals("bug!",Break,day1.getAppointment(12));
     }
 
     @Test

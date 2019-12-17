@@ -69,7 +69,7 @@ public class DayTest1hBreak018
     {
         //given
         //full day with one hour break at 13 o'clock
-        setUp();
+        // is called automatically: setUp();
         //when
         boolean actualValue = day1.makeAppointment(13, MT);
         //then
@@ -106,7 +106,7 @@ public class DayTest1hBreak018
         //trying to make 2 hour appointment at 13 o'clock
         boolean actual = day1.makeAppointment(13, Lap);
         //then
-        assertEquals(false, actual);
+        assertEquals("bug! ",false, actual);
     }
 
     @Test

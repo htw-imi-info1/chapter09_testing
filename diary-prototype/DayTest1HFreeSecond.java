@@ -45,7 +45,7 @@ public class DayTest1HFreeSecond
         // when I put an 2h appointment at 11:00
         boolean result = day1.makeAppointment(11, gdm);
         // then false should be returned
-        assertEquals("when I put an 2h appointment at 11:00",false, result);
+        assertEquals("bug! when I put an 2h appointment at 11:00",false, result);
     }
     
      @Test
@@ -55,7 +55,7 @@ public class DayTest1HFreeSecond
         // when I put an 2h appointment at 11:00
         boolean result = day1.makeAppointment(11, gdm);
         // then existing was not overwritten should be returned
-        assertEquals(lab,day1.getAppointment(12));
+        assertEquals("bug!",lab,day1.getAppointment(12));
     }
 }
 

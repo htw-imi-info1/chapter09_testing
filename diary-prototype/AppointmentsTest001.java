@@ -66,13 +66,15 @@ public class AppointmentsTest001
     // zweiter Test
     @Test
     public void makefalseApp(){
+        // when
         day2with3hBreak();
         // Selbe Prozedere, nur das die Variable "gdm" f�r 3 Stunden geht.
         boolean actual = day2.makeAppointment(16, gdm);
         // Bei dem Festsetzen der Zeit (hier 16), ist es nicht m�glich einen Termin
         // festzusetzen, weil die Dauer des Termins �ber die Grenze hinausgeht.
         // Zur Info: Grenze, um Termine einzutragen ist von 09:00 Uhr bis 17:00 Uhr
-        assertEquals (true, actual);
+        assertEquals ("bug!",false, actual);
+        //BK: this is a negative test - it is expected to return false
     }
 
 

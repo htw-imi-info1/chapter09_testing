@@ -33,6 +33,7 @@ public class DayTestLast1HFree023
     }
 
     private void dayWithlast1hfree(){
+        // this day has more than last hour free.
         day1.makeAppointment(9, gdm);
         day1.makeAppointment(12, info2);
     }
@@ -57,7 +58,7 @@ public class DayTestLast1HFree023
         // when
         boolean actual = day1.makeAppointment(12, lunch);
         // then
-        assertEquals(true, actual);
+        assertEquals(false, actual); // this returns false correctly.
     }
     @Test
     public void testMakeApp12()
@@ -68,7 +69,7 @@ public class DayTestLast1HFree023
         // when
         boolean actual = day1.makeAppointment(12, lunch);
         // then
-        assertEquals(true, actual);
+        assertEquals(false, actual); // 12 is taken!
     }
 
     @Test

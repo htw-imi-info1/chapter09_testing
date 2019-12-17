@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=DayTest1HFree006
+comment0.text=\n\ The\ test\ class\ DayTest.\n\n\ @author\ \ Barne\ Kleinen\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ Sets\ up\ the\ test\ fixture.\n\n\ Called\ before\ every\ test\ case\ method.\n
+comment2.params=
+comment2.target=void\ dayWith1hBreak()
+comment3.params=
+comment3.target=void\ ownTest1()
+comment4.params=
+comment4.target=void\ ownTest2()
+numComments=5

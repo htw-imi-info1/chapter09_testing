@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=DayTest1HFree016
+comment0.text=\n\ Die\ Test-Klasse\ DayTest.\n\n\ @author\ \ (Ihr\ Name)\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ \ Setzt\ das\ Testger\u00D4\u00F8\u03A9st\ fuer\ den\ Test.\n\n\ Wird\ vor\ jeder\ Testfall-Methode\ aufgerufen.\n
+comment2.params=
+comment2.target=void\ makeAppointments()
+comment3.params=
+comment3.target=void\ validTimeTrue()
+comment4.params=
+comment4.target=void\ TwoHourAppointmentInAppointment()
+numComments=5

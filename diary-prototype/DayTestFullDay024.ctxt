@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=DayTestFullDay024
+comment0.text=\n\ The\ test\ class\ DayTest.\n\n\ @author\ \ Barne\ Kleinen\n
+comment1.params=
+comment1.target=void\ setUpFullDay()
+comment1.text=\n\ Sets\ up\ the\ test\ fixture.\n\n\ Called\ before\ every\ test\ case\ method.\n
+comment2.params=
+comment2.target=void\ setUpHalfDay()
+comment3.params=
+comment3.target=void\ testMakeAppointmentOverApp()
+comment4.params=
+comment4.target=void\ testMakeAppointmentOutOfTime()
+comment5.params=
+comment5.target=void\ testMakeAppointmentHalfDay()
+comment6.params=
+comment6.target=void\ testFindSpace()
+numComments=7

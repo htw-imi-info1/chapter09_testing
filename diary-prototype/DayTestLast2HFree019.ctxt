@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=DayTestLast2HFree019
+comment0.text=\n\ The\ test\ class\ DayTest.\n\n\ @author\ \ Barne\ Kleinen\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ Sets\ up\ the\ test\ fixture.\n\n\ Called\ before\ every\ test\ case\ method.\n
+comment10.params=
+comment10.target=void\ testAppointmentWasActuallyScheduled()
+comment2.params=
+comment2.target=void\ dayWithlast2hrfree()
+comment3.params=
+comment3.target=void\ test2hSlotIsFound()
+comment4.params=
+comment4.target=void\ testMakeApp9onAnotherApp()
+comment5.params=
+comment5.target=void\ testMakeApp15()
+comment6.params=
+comment6.target=void\ testMakeApp16()
+comment7.params=
+comment7.target=void\ testMakeApp16with3()
+comment8.params=
+comment8.target=void\ testMakeApp17()
+comment9.params=
+comment9.target=void\ testMakeApp18()
+numComments=11

@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=FullDay014
+comment0.text=\n\ Die\ Test-Klasse\ DayTest.\n\n\ @author\ \ (Ihr\ Name)\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ \ Setzt\ das\ Testger\u00D4\u00F8\u03A9st\ fuer\ den\ Test.\n\n\ Wird\ vor\ jeder\ Testfall-Methode\ aufgerufen.\n
+comment2.params=
+comment2.target=void\ DayWithFirstHourFree()
+comment3.params=
+comment3.target=void\ TagMitFreistunden()
+comment4.params=
+comment4.target=void\ TagOhneFreistunden()
+comment5.params=
+comment5.target=void\ Test1()
+comment6.params=
+comment6.target=void\ Test2()
+comment7.params=
+comment7.target=void\ Test3()
+comment8.params=
+comment8.target=void\ tearDown()
+comment8.text=\n\ Gibt\ das\ Testger\u00D4\u00F8\u03A9st\ wieder\ frei.\n\n\ Wird\ nach\ jeder\ Testfall-Methode\ aufgerufen.\n
+numComments=9

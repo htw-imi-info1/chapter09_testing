@@ -2,4 +2,10 @@
 comment0.target=Note
 comment1.params=title\ text
 comment1.target=Note(java.lang.String,\ java.lang.String)
-numComments=2
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment3.params=other
+comment3.target=boolean\ equals(java.lang.Object)
+comment4.params=
+comment4.target=int\ hashCode()
+numComments=5

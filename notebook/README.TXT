@@ -1,12 +1,14 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
-------------------------------------------------------------------------
+Project: notebook1
+Authors: David J. Barnes and Michael Kolling
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+This project provides a simple notebook implementation.
+
+This project is part of the Java 5 supplementary material for
+chapter 4 of the book
+
+   Objects First with Java - A Practical Introduction using BlueJ
+   Fourth edition
+   David J. Barnes and Michael Kolling
+   Pearson Education, 2008
+
+To start this project, create a Notebook object and invoke its methods.

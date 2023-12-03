@@ -3,32 +3,27 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import java.util.ArrayList;
-import java.util.stream.Collectors;
 
-/**
- * The test class NotebookTest.
- *
- * @author  B. Kleinen */
-public class NotebookTest
+public class BetterNotebookTest
 {
-    Notebook notebook;
+
+    BetterNotebook notebook;
     /**
-     * Default constructor for test class NotebookTest
+     * Default constructor for test class BetterNotebookTest
      */
-    public NotebookTest()
+    public BetterNotebookTest()
     {
     }
 
     /**
-     * Create a Notebook with four notes as text fixture.
+     * Sets up the test fixture.
      *
      * Called before every test case method.
      */
     @BeforeEach
     public void setUp()
     {
-        notebook = new Notebook();
+        notebook = new BetterNotebook();
         notebook.storeNote("a");
         notebook.storeNote("b");
         notebook.storeNote("c");
@@ -37,33 +32,58 @@ public class NotebookTest
 
     @Test
     public void testGetAllEmpty(){
-        notebook = new Notebook();
+        notebook = new BetterNotebook();
         assertEquals("",notebook.getAll());
     }
 
     @Test
     public void testGetAllOneElement(){
-        notebook = new Notebook();
+        notebook = new BetterNotebook();
         notebook.storeNote("b");
-        assertEquals("b\n",notebook.getAll());
+        String expected = """
+# New Note
+b
+
+""";
+        assertEquals(expected,notebook.getAll());
     }
 
     @Test
     public void testGetAllTwoElements(){
-        notebook = new Notebook();
+        notebook = new BetterNotebook();
         notebook.storeNote("b");
         notebook.storeNote("c");
-        assertEquals("b, c",notebook.getAll(", "));
+
+        String expected = """
+# New Note
+b
+
+# New Note
+c
+
+""";
+        assertEquals(expected,notebook.getAll());
     }
 
     @Test
     public void testGetAllDelim(){
-        assertEquals("a, b, c, d",notebook.getAll(", "));
+        String expected = """
+# New Note
+a
+
+# New Note
+b
+
+# New Note
+c
+
+# New Note
+d
+
+""";
+        assertEquals(expected,notebook.getAll());
     }
 
-    @Test
-    public void testGetAllDefault(){
-        assertEquals("a\nb\nc\nd\n",notebook.getAll());
-    }
 
+  
 }

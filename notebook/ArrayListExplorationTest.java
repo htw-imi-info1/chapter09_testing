@@ -21,7 +21,7 @@ public class ArrayListExplorationTest
     }
 
     /**
-     * Sets up the test fixture.
+     * Create an ArrayList with four elements as text fixture.
      *
      * Called before every test case method.
      */
@@ -52,7 +52,8 @@ public class ArrayListExplorationTest
         int initialSize = list.size();
         list.remove(1);
         assertEquals(initialSize-1,list.size());
-        assertEquals("c",list.get(2));
+        assertEquals("c",list.get(1));
+        assertEquals("d",list.get(2));
     }
     
   

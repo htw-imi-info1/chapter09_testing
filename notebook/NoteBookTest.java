@@ -1,5 +1,4 @@
 
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,6 +12,7 @@ import java.util.stream.Collectors;
  * @author  B. Kleinen */
 public class NotebookTest
 {
+    Notebook notebook;
     /**
      * Default constructor for test class NotebookTest
      */
@@ -21,97 +21,49 @@ public class NotebookTest
     }
 
     /**
-     * Sets up the test fixture.
+     * Create a Notebook with four notes as text fixture.
      *
      * Called before every test case method.
      */
     @BeforeEach
     public void setUp()
     {
-    }
-
-
-    @Test
-    public void testArrayListInsert()
-    {
-        ArrayList<String> list = new ArrayList<>();
-        list.add("a");
-        list.add("b");
-        list.add("c");
-        list.add("d");
-        list.add(2,"z");
-        String actual = list.stream().collect(Collectors.joining(","));
-        assertEquals("a,b,z,c,d",actual);
-        
+        notebook = new Notebook();
+        notebook.storeNote("a");
+        notebook.storeNote("b");
+        notebook.storeNote("c");
+        notebook.storeNote("d");
     }
 
     @Test
-    public void testNotInList()
-    {
-        Notebook notebook1 = new Notebook();
-        notebook1.storeNote("a");
-        notebook1.storeNote("b");
-        notebook1.storeNote("c");
-        notebook1.removeWithIndex("d");
-        java.lang.String string1 = notebook1.getAll();
-        assertEquals("a\nb\nc\n", string1);
-       // assertEquals("a\nc\n", string1);
+    public void testGetAllEmpty(){
+        notebook = new Notebook();
+        assertEquals("",notebook.getAll());
     }
-    
+
     @Test
-    public void exploreAdd()
-    {
-        Notebook notebook1 = new Notebook();
-        notebook1.storeNote("a");
-        notebook1.storeNote("b");
-        notebook1.storeNote("b");
-        notebook1.storeNote("b");
-        notebook1.storeNote("c");
-        notebook1.removeWithIndex("b");
-        java.lang.String string1 = notebook1.getAll();
-        //assertEquals("a\nb\nc\n", string1);
-        assertEquals("a\nc\n", string1);
+    public void testGetAllOneElement(){
+        notebook = new Notebook();
+        notebook.storeNote("b");
+        assertEquals("b\n",notebook.getAll());
     }
-    
+
     @Test
-    public void testTwoB()
-    {
-        Notebook notebook1 = new Notebook();
-        notebook1.storeNote("a");
-        notebook1.storeNote("b");
-        notebook1.storeNote("b");
-        notebook1.storeNote("c");
-        notebook1.removeWithIndex("b");
-        java.lang.String string1 = notebook1.getAll();
-        //assertEquals("a\nb\nc\n", string1);
-        assertEquals("a\nc\n", string1);
+    public void testGetAllTwoElements(){
+        notebook = new Notebook();
+        notebook.storeNote("b");
+        notebook.storeNote("c");
+        assertEquals("b, c",notebook.getAll(", "));
     }
-    
-        @Test
-    public void testTwoBDifferentPlaces()
-    {
-        Notebook notebook1 = new Notebook();
-        notebook1.storeNote("a");
-        notebook1.storeNote("b");
-        notebook1.storeNote("c");
-        notebook1.storeNote("b");
-        
-        notebook1.removeWithIndex("b");
-        java.lang.String string1 = notebook1.getAll();
-        //assertEquals("a\nb\nc\n", string1);
-        assertEquals("a\nc\n", string1);
-    }
-    
+
     @Test
-    public void testEmpty()
-    {
-        Notebook notebook1 = new Notebook();
-        notebook1.removeWithIndex("b");
-        java.lang.String string1 = notebook1.getAll();
-        //assertEquals("a\nb\nc\n", string1);
-        assertEquals("", string1);
+    public void testGetAllDelim(){
+        assertEquals("a, b, c, d",notebook.getAll(", "));
     }
-    
+
+    @Test
+    public void testGetAllDefault(){
+        assertEquals("a\nb\nc\nd\n",notebook.getAll());
+    }
+
 }
-
-

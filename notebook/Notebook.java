@@ -22,34 +22,6 @@ public class Notebook
         notes = new ArrayList<String>();
     }
 
-    public static Notebook test2(){
-        Notebook notebook = new Notebook();
-        notebook.storeNote("a");
-        notebook.storeNote("bc");
-        return notebook;
-    }
-    public static Notebook test(){
-        Notebook notebook1 = new Notebook();
-        notebook1.storeNote("a");
-        notebook1.storeNote("b");
-        notebook1.storeNote("b");
-        notebook1.storeNote("b");
-        notebook1.storeNote("c");
-        return notebook1;
-    }
-    
-       public static Notebook test3(){
-        Notebook notebook1 = new Notebook();
-        notebook1.storeNote("a");
-        notebook1.storeNote("b");
-        notebook1.storeNote("b");
-        notebook1.storeNote("b");
-        notebook1.storeNote("c");
-        notebook1.removeWithIndex("b");
-        notebook1.printAll();   
-        return notebook1;
-    }
-
     /**
      * Store a new note into the notebook.
      * @param note The note to be stored.
@@ -87,31 +59,41 @@ public class Notebook
     }
 
     public String getAll(){
+        final String delim  =  "\n";
+        String result = getAll(delim);
+        if (result.length() > 0) result += delim;
+        return result;
+    }
+
+    public String getAll(String delim){
         String result = "";
-        for (String note : notes){
-            result += note+"\n";
+        String note = "";
+        Iterator<String> i = notes.iterator();
+        while (i.hasNext()){
+            note = i.next();
+            result += note;
+            if (i.hasNext()) result = result + delim;
         }
         return result;
     }
 
-    
-     public void printAll(){
-        
+    public void printAll(){
         for (String note : notes){
             System.out.println(note);
         }
-        
+
     }
+
     public void removeWithIndex(String searchString){
-        int size = notes.size();
-        for(int i=0;i<size;i++){
-        
+        //int size = notes.size();
+        for(int i=0;i<notes.size();i++){
+
             if (notes.get(i).contains(searchString)){
                 notes.remove(i);
                 i--;
             }
         }
-        
+
     }
 
     public String getNotesWith(String searchString){

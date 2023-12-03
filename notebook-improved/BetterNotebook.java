@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+
 /**
  * A class to maintain an arbitrarily long list of notes.
  * Notes are numbered for external reference by a human user.
@@ -22,42 +24,27 @@ public class BetterNotebook
         notes = new ArrayList<Note>();
     }
 
-    public static BetterNotebook test2(){
-        BetterNotebook notebook = new BetterNotebook();
-        notebook.storeNote("a");
-        notebook.storeNote("bc");
-        return notebook;
-    }
-    public static BetterNotebook test(){
-        BetterNotebook notebook1 = new BetterNotebook();
-        notebook1.storeNote("a");
-        notebook1.storeNote("b");
-        notebook1.storeNote("b");
-        notebook1.storeNote("b");
-        notebook1.storeNote("c");
-        return notebook1;
-    }
-    
-       public static BetterNotebook test3(){
-        BetterNotebook notebook1 = new BetterNotebook();
-        notebook1.storeNote("a");
-        notebook1.storeNote("b");
-        notebook1.storeNote("b");
-        notebook1.storeNote("b");
-        notebook1.storeNote("c");
-        notebook1.removeWithIndex("b");
-        notebook1.printAll();   
-        return notebook1;
-    }
-
     /**
      * Store a new note into the notebook.
      * @param note The note to be stored.
      */
+    public void storeNote(Note note)
+    {
+        if (null == note)
+            return;
+        notes.add(note);
+    }
+
     public void storeNote(String note)
     {
         if ((null == note) || "".equals(note)) return;
-        notes.add(new Note("Note 1",note));
+        notes.add(new Note(null,note));
+    }
+
+    public void storeNote(String title, String note)
+    {
+        if ((null == note) || "".equals(note)) return;
+        notes.add(new Note(title, note));
     }
 
     /**
@@ -89,34 +76,37 @@ public class BetterNotebook
     public String getAll(){
         String result = "";
         for (Note note : notes){
-            result += note.text+"\n";
+            result += note+"\n";
         }
         return result;
     }
 
-    
-     public void printAll(){
-        
+    public void printAll(){
         for (Note note : notes){
             System.out.println(note);
         }
-        
+
     }
+
     public void removeWithIndex(String searchString){
         int size = notes.size();
         for(int i=0;i<size;i++){
-        
+
             if (notes.get(i).text.contains(searchString)){
                 notes.remove(i);
                 i--;
             }
         }
-        
+
     }
 
-    public String getNotesWith(String searchString){
-        String result = "";
-        result = result +"??" +"\n";
+    public List<Note> getNotesWith(String searchString){
+        List<Note> result = new ArrayList<Note>();
+        for(Note note : notes){
+            if (note.getTitle().contains(searchString) || 
+            note.getText().contains(searchString))
+                result.add(note);
+        }
         return result;
 
     }

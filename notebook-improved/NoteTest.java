@@ -24,7 +24,7 @@ public class NoteTest
     @Test
     public void testToStringNull(){
         Note note = new Note(null, "the text");
-        assertEquals("# null\nthe text\n",note.toString());
+        assertEquals("# New Note\nthe text\n",note.toString());
     }
 
     @Test

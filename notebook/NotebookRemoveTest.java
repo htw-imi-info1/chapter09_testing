@@ -11,12 +11,12 @@ import java.util.stream.Collectors;
  * The test class NotebookTest.
  *
  * @author  B. Kleinen */
-public class NotebookTest
+public class NotebookRemoveTest
 {
     /**
-     * Default constructor for test class NotebookTest
+     * Default constructor needs to be present for JUnit!
      */
-    public NotebookTest()
+    public NotebookRemoveTest()
     {
     }
 

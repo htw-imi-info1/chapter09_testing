@@ -1,9 +1,9 @@
 #BlueJ class context
-comment0.target=NotebookTest
+comment0.target=NotebookRemoveTest
 comment0.text=\n\ The\ test\ class\ NotebookTest.\n\n@author\ \ B.\ Kleinen
 comment1.params=
-comment1.target=NotebookTest()
-comment1.text=\n\ Default\ constructor\ for\ test\ class\ NotebookTest\n
+comment1.target=NotebookRemoveTest()
+comment1.text=\n\ Default\ constructor\ needs\ to\ be\ present\ for\ JUnit\!\n
 comment2.params=
 comment2.target=void\ setUp()
 comment2.text=\n\ Sets\ up\ the\ test\ fixture.\n\n\ Called\ before\ every\ test\ case\ method.\n

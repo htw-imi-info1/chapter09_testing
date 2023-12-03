@@ -3,7 +3,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static codequizz.Expect.*;
-import static org.junit.jupiter.api.Assertions.*;
 /**
  * This class is an exercise in understanding object references.
  * First, start the code Quizz by setting CodeQuizz.ON = true;
@@ -16,19 +15,26 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ObjectReferencePlayground
 {
 
-    public static final String ____ = CodeQuizz.____;
     public ObjectReferencePlayground()
     {
-        CodeQuizz.ON = true;
+        ON = true;
     }
 
     @Test
-    public void koan01(){
+    public void getText(){
+        Note note1 = new Note("one title", "some longer text");
+        expect(____,note1.getText());
+
+    }
+    
+    @Test
+    public void getTextWithSecondNote(){
         Note note1 = new Note("one title", "some longer text");
         Note note2 = note1;
         assertEquals("some longer text",note1.getText());
         note2.setText("new text");
-        CodeQuizz.expect(____,note1.getText());
+        expect(____,note2.getText());
+        expect(____,note1.getText());
 
     }
 
@@ -38,5 +44,6 @@ public class ObjectReferencePlayground
         Note note2 = new Note("one title", "some longer text");
         assertEquals("some longer text",note1.getText());
         note2.setText("new text");
+        expect(____,note1.getText());
     }
 }

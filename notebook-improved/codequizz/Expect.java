@@ -11,12 +11,13 @@ public class Expect
         String clazz = caller.getClassName();
         String method = caller.getMethodName();
         int line = caller.getLineNumber();
-        String context = clazz+"::"+":"+line;
-
+        String context = clazz+"::"+method+":"+line;
+        context = caller.toString();
+        
         if(!ON || expected.equals(actual)) return;
         if(____.equals(expected))
             fail("fill in: "+context);
         else 
-            fail(expected + "is not correct! - try again: "+context);
+            fail("\""+expected + "\" is not correct! - try again: "+context);
     }
 }

@@ -10,14 +10,14 @@ import org.junit.jupiter.api.Test;
  * @author  (your name)
  * @version (a version number or a date)
  */
-public class BetterNotebookTest
+public class BetterNotebookRemoveTest
 {
 
     BetterNotebook notebook;
     /**
      * Default constructor for test class BetterNotebookTest
      */
-    public BetterNotebookTest()
+    public BetterNotebookRemoveTest()
     {
     }
 

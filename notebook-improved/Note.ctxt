@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Note
+comment1.params=title\ text
+comment1.target=Note(java.lang.String,\ java.lang.String)
+numComments=2

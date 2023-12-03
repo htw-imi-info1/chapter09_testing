@@ -23,6 +23,7 @@ public class ObjectsInCollectionsQuizz
     {
         ON = true;
     }
+
     @BeforeEach
     public void setUp()
     {
@@ -32,7 +33,7 @@ public class ObjectsInCollectionsQuizz
         notebook.storeNote("Title","c");
         notebook.storeNote("Title","d");
     }
-    
+
     @Test
     public void testChange01(){
         List<Note> bNotes = notebook.getNotesWith("b");
@@ -41,9 +42,9 @@ public class ObjectsInCollectionsQuizz
         bNote.setText("not B anymore");
         bNotes = notebook.getNotesWith("b");
         expect(____,bNotes.size());
-        
+
     }
-    
+
     @Test
     public void testChange02(){
         Note note1 = new Note("a title", "the text");
@@ -53,7 +54,35 @@ public class ObjectsInCollectionsQuizz
         expect(____, note1 == note2);
         note2.setText("another thing");
         expect(____,note1.getText());
-    
+
+    }
+    @Test
+    public void testIdentity(){
+        Note note1 = new Note("a title", "the text");
+        Note note2 = new Note("a title", "the text");
+        expect(____, note1 == note2);
+        expect(____, note1.equals(note2));
         
+        note2.setTitle("new title");
+        expect(____, note1.equals(note2));
+    }
+
+    @Test
+    public void testChange03(){
+        Note note1 = new Note("a title", "the text");
+        Note note2 = new Note("a title", "the text");
+        notebook.storeNote(note1);
+        notebook.storeNote(note2);
+
+        Note note3 = notebook.getFirstNoteWith("text");
+
+        expect(____, note1 == note3);
+        expect(____, note2 == note3);
+
+        note3.setText("another thing");
+        expect(____,note1.getText());
+        expect(____,note2.getText());
+        expect(____,note3.getText());
+
     }
 }

@@ -10,7 +10,7 @@ import java.util.List;
  * @author David J. Barnes and Michael Kolling.
  * @version 2008.03.30
  */
-public class BetterNotebook
+public class BetterNotebook implements Iterable
 {
     // Storage for an arbitrary number of notes.
     private ArrayList<Note> notes;
@@ -100,6 +100,12 @@ public class BetterNotebook
 
     }
 
+    public Note getFirstNoteWith(String searchString){
+        List<Note> results = getNotesWith(searchString);
+        if (results.size() == 0) return null;
+        return results.get(0);
+    }
+
     public List<Note> getNotesWith(String searchString){
         List<Note> result = new ArrayList<Note>();
         for(Note note : notes){
@@ -109,6 +115,10 @@ public class BetterNotebook
         }
         return result;
 
+    }
+
+    public Iterator<Note> iterator(){
+        return notes.iterator();
     }
 
 }

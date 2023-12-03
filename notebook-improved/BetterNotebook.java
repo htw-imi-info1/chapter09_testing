@@ -10,7 +10,7 @@ import java.util.List;
  * @author David J. Barnes and Michael Kolling.
  * @version 2008.03.30
  */
-public class BetterNotebook implements Iterable
+public class BetterNotebook implements Iterable<Note>
 {
     // Storage for an arbitrary number of notes.
     private ArrayList<Note> notes;

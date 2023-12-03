@@ -85,4 +85,32 @@ public class ObjectsInCollectionsQuizz
         expect(____,note3.getText());
 
     }
+    
+    @Test
+    public void twoNotebooks(){
+        BetterNotebook notebook2 = new BetterNotebook();
+        for (Note note : notebook){
+            notebook2.storeNote(note);
+        }
+        Note note1 = notebook.getFirstNoteWith("c");
+        Note note2 = notebook2.getFirstNoteWith("c");
+        expect(____, note1.equals(note2));
+        note2.setText("new text");
+        expect(____, note1.equals(note2));
+
+    }
+    
+    @Test
+    public void twoNotebooksCopy(){
+        BetterNotebook notebook2 = new BetterNotebook();
+        for (Note note : notebook){
+            notebook2.storeNote(note.getTitle(), note.getText());
+        }
+        Note note1 = notebook.getFirstNoteWith("c");
+        Note note2 = notebook2.getFirstNoteWith("c");
+        expect(____, note1.equals(note2));
+        note2.setText("new text");
+        expect(____, note1.equals(note2));
+
+    }
 }

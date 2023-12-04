@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=BugTestDemo
+comment0.text=\n\ This\ Class\ shows\ an\ example\ how\ to\ document\ a\ bug\n\ with\ using\ assertEqualsBug\ from\ the\ testhelper\ \n\ package\n\n\ @author\ Barne\ Kleinen\n
+comment1.params=
+comment1.target=BugTestDemo()
+comment2.params=
+comment2.target=void\ demoOKTest()
+comment3.params=
+comment3.target=void\ demoBugTest()
+numComments=4

@@ -29,12 +29,18 @@ public class Appointment
     {
         return description;
     }
-    
+
     /**
      * @return The duration (in hours) of the appointment.
      */
     public int getDuration()
     {
         return duration;
+    }
+
+    @Override
+    public String toString(){
+        return getDescription()+"("+getDuration()+"hrs)"+"@" + Integer.toHexString(hashCode());
+
     }
 }

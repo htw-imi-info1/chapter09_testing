@@ -11,9 +11,9 @@ public class Day
     public static final int FINAL_APPOINTMENT_TIME = 17;
     // The number of bookable hours in a day.
     public static final int MAX_APPOINTMENTS_PER_DAY =
-                                FINAL_APPOINTMENT_TIME -
-                                START_OF_DAY + 1;
-    
+        FINAL_APPOINTMENT_TIME -
+        START_OF_DAY + 1;
+
     // A day number within a particular year. (1-366)
     private int dayNumber;
     // The current list of appointments for this day.
@@ -51,9 +51,9 @@ public class Day
                     // How many more slots are needed?
                     int further_slots_required = duration - 1;
                     for(int nextSlot = slot + 1;
-                                further_slots_required > 0 &&
-                                appointments[nextSlot] == null;
-                                    nextSlot++) {
+                    further_slots_required > 0 &&
+                    appointments[nextSlot] == null;
+                    nextSlot++) {
                         further_slots_required--;
                     }
                     if(further_slots_required == 0) {
@@ -74,9 +74,9 @@ public class Day
      * @return true if the appointment was successful,
      *         false otherwise.
      */
-    public boolean makeAppointment(int time,
-                                   Appointment appointment)
+    public boolean makeAppointment(int time, Appointment appointment)
     {
+        time = allow100(time);
         if(validTime(time)) {
             int startTime = time - START_OF_DAY;
             if(appointments[startTime] == null) {
@@ -96,7 +96,7 @@ public class Day
             return false;
         }
     }
-    
+
     /**
      * @param time Which time of day. This must be between the
      *        START_OF_DAY time and the FINAL_APPOINTMENT_TIME.
@@ -106,6 +106,7 @@ public class Day
      */
     public Appointment getAppointment(int time)
     {
+        time = allow100(time);
         if(validTime(time)) {
             return appointments[time - START_OF_DAY];
         }
@@ -140,7 +141,7 @@ public class Day
     {
         return dayNumber;
     }
-    
+
     /**
      * @return true if the time is between FINAL_APPOINTMENT_TIME and
      *         END_OF_DAY, false otherwise.
@@ -149,4 +150,16 @@ public class Day
     {
         return time >= START_OF_DAY && time <= FINAL_APPOINTMENT_TIME;
     }
+
+    /**
+     * little helper that allows time parameters to given in the
+     * form 1400 instead of 14 which makes the test cases easier
+     * to read
+     */
+    private int allow100(int time){
+        if (time < 100)
+            return time;
+        return time / 100;
+    }
+
 }

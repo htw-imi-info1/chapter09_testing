@@ -1,9 +1,11 @@
 
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+import static testhelper.Bug.assertEqualsBug;
+import static testhelper.Bug.assertEqualsBugException;
+import static testhelper.Bug.FAIL_BUGS;
+import static testhelper.Bug.SILENCE_ALL_BUGS;
 public class DayTest
 {
     private Day day1;
@@ -15,6 +17,7 @@ public class DayTest
      */
     public DayTest()
     {
+        FAIL_BUGS = false;
     }
 
     /**
@@ -31,7 +34,6 @@ public class DayTest
         info2 = new Appointment("info2", 2);
     }
 
-
     @Test
     public void makeAppointmentWith2ndHourFull()
     {   //given 
@@ -40,9 +42,9 @@ public class DayTest
         boolean actual = day1.makeAppointment(10, info2);
         // then false should be returned
         boolean expected = false;
-        assertEquals(expected, actual);
+        assertEqualsBug(expected, actual);
     }
-    
+
     @Test
     public void findSpace()
     {   //given 

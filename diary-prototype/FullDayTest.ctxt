@@ -1,13 +1,13 @@
 #BlueJ class context
-comment0.target=DayTest
+comment0.target=FullDayTest
 comment1.params=
-comment1.target=DayTest()
+comment1.target=FullDayTest()
 comment1.text=\n\ Default\ constructor\ for\ test\ class\ DayTest\n
 comment2.params=
 comment2.target=void\ setUp()
 comment2.text=\n\ Sets\ up\ the\ test\ fixture.\n\n\ Called\ before\ every\ test\ case\ method.\n
 comment3.params=
-comment3.target=void\ makeAppointmentWith2ndHourFull()
+comment3.target=void\ makeAppointmentInFullDay()
 comment4.params=
-comment4.target=void\ findSpace()
+comment4.target=void\ findSpaceInFullDay()
 numComments=5

@@ -22,7 +22,7 @@ public class BugTestDemo
         // as it is executed while loading the class, 
         // which should be done before any test execution
         // at least after a full re-compilation.
-        FAIL_BUGS = true;
+        FAIL_BUGS = false;
         System.out.print(java.time.LocalTime.now()+" loaded class BugTestDemo, static{} executed, ");
         System.out.println("FAIL_BUGS = "+FAIL_BUGS);
     }

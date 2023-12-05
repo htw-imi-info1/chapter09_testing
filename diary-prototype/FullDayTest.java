@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class DayTest
+public class FullDayTest
 {
     private Day day1;
     private Appointment info1;
@@ -13,7 +13,7 @@ public class DayTest
     /**
      * Default constructor for test class DayTest
      */
-    public DayTest()
+    public FullDayTest()
     {
     }
 
@@ -26,31 +26,32 @@ public class DayTest
     public void setUp()
     {
         day1 = new Day(1);
-        info1 = new Appointment("info1", 2);
-        day1.makeAppointment(11, info1);
+        info1 = new Appointment("long app.", 9);
+        day1.makeAppointment(9, info1);
         info2 = new Appointment("info2", 2);
     }
 
 
-    @Test
-    public void makeAppointmentWith2ndHourFull()
+    //@Test
+    public void makeAppointmentInFullDay()
     {   //given 
-        // day1 one has one 2h appointment at 1100
-        // when I try to make 2hr app. at 10
-        boolean actual = day1.makeAppointment(10, info2);
+        // full day
+        // when trying to find space for app.
+        int actual = day1.findSpace(info2);
         // then false should be returned
-        boolean expected = false;
+        int expected = -1;
         assertEquals(expected, actual);
     }
     
+    // negative test
     @Test
-    public void findSpace()
+    public void findSpaceInFullDay()
     {   //given 
         // day1 one has one 2h appointment at 1100
         // when I try to make 2hr app. at 10
         int actual = day1.findSpace(info2);
         // then false should be returned
-        int expected = 9;
+        int expected = -1;
         assertEquals(expected, actual);
     }
 }

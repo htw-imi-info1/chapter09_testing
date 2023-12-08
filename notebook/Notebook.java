@@ -85,8 +85,9 @@ public class Notebook
     }
 
     public void removeWithIndex(String searchString){
-        //int size = notes.size();
-        for(int i=0;i<notes.size();i++){
+        int size = notes.size();
+        //for(int i=0;i<notes.size();i++){
+        for(int i=0;i<size;i++){
 
             if (notes.get(i).contains(searchString)){
                 notes.remove(i);
@@ -101,6 +102,21 @@ public class Notebook
         result = result +"??" +"\n";
         return result;
 
+    }
+
+    public static void test() 
+    {
+        int sum = 1;
+
+        for (int i = 0; i <= 4; i++); 
+        {
+            sum = sum + 1;
+        }
+
+        System.out.println("The result is: " + sum);
+        System.out.println("Double result: " + sum+sum);
+
+        System.out.println( sum+sum+ "is the Double result");
     }
 
 }

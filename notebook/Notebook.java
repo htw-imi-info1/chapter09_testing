@@ -86,8 +86,8 @@ public class Notebook
 
     public void removeWithIndex(String searchString){
         int size = notes.size();
-        //for(int i=0;i<notes.size();i++){
-        for(int i=0;i<size;i++){
+        for(int i=0;i<notes.size();i++){
+        //for(int i=0;i<size;i++){
 
             if (notes.get(i).contains(searchString)){
                 notes.remove(i);
